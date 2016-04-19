@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedpreferences;
 
-    //Test Commit
+    //Test Commit2
     TextView mond;
     TextView tuesd;
     TextView wed;
