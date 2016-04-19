@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dr. Daniels"
+        android:id="@+id/textView"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daniels Office Hours"
+        android:id="@+id/textView2"
+        android:layout_marginTop="26dp"
+        android:textSize="20dp"
+        android:layout_marginLeft="30dp"
+        android:textColor="#000000"
+        android:layout_marginStart="94dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:id="@+id/textView3"
+        android:layout_marginTop="56dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView2"
+        android:layout_alignStart="@+id/textView2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday"
+        android:id="@+id/textView4"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        android:id="@+id/textView5"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignStart="@+id/textView4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday"
+        android:id="@+id/textView6"
+        android:layout_marginTop="31dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView5"
+        android:layout_alignStart="@+id/textView5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        android:id="@+id/textView7"
+        android:textSize="20dp"
+        android:layout_below="@+id/textView6"
+        android:layout_alignStart="@+id/textView6"
+        android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mon"
+        android:id="@+id/mondayOfficeHours"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_marginStart="26dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tues"
+        android:id="@+id/tuesDayOfficeHours"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_alignStart="@+id/mondayOfficeHours" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weds"
+        android:id="@+id/wednesdayOfficeHours"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_alignStart="@+id/tuesDayOfficeHours" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="thurs"
+        android:id="@+id/thursdayOfficeHours"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_alignStart="@+id/wednesdayOfficeHours" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fris"
+        android:id="@+id/fridayOfficeHours"
+        android:layout_alignTop="@+id/textView7"
+        android:layout_alignStart="@+id/thursdayOfficeHours" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send Daniels A Message"
+        android:id="@+id/sendEmailMsg"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="SendMsg"/>
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Admin Login"
+        android:id="@+id/danielsLogin"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:textSize="10dp"
+        android:onClick="DanielsEdit"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Classes and Homework"
+        android:id="@+id/textView9"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_toStartOf="@+id/danielsLogin" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Class 1"
+        android:id="@+id/class1"
+        android:layout_alignBottom="@+id/mondayOfficeHours"
+        android:layout_toStartOf="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Class 2"
+        android:id="@+id/class2"
+        android:layout_alignBottom="@+id/tuesDayOfficeHours"
+        android:layout_alignStart="@+id/class1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Class 3"
+        android:id="@+id/class3"
+        android:layout_alignBottom="@+id/wednesdayOfficeHours"
+        android:layout_alignStart="@+id/class4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Class 4"
+        android:id="@+id/class4"
+        android:layout_alignBottom="@+id/thursdayOfficeHours"
+        android:layout_alignStart="@+id/class5" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Class 5"
+        android:id="@+id/class5"
+        android:layout_alignBottom="@+id/fridayOfficeHours"
+        android:layout_alignStart="@+id/class2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Class 6"
+        android:id="@+id/class6"
+        android:layout_below="@+id/class5"
+        android:layout_alignStart="@+id/class5"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="HomeWork 1"
+        android:id="@+id/homework1"
+        android:layout_alignBottom="@+id/class1"
+        android:layout_alignEnd="@+id/textView9"
+        android:layout_marginEnd="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Homework 2"
+        android:id="@+id/homework2"
+        android:layout_alignBaseline="@+id/tuesDayOfficeHours"
+        android:layout_alignBottom="@+id/tuesDayOfficeHours"
+        android:layout_alignStart="@+id/homework1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Homework 3"
+        android:id="@+id/homework3"
+        android:layout_alignBottom="@+id/class3"
+        android:layout_alignStart="@+id/homework2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Homework 4"
+        android:id="@+id/homework4"
+        android:layout_alignBottom="@+id/class4"
+        android:layout_alignStart="@+id/homework3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Homework5"
+        android:id="@+id/homework5"
+        android:layout_alignBottom="@+id/class5"
+        android:layout_alignStart="@+id/homework4" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Homework 6"
+        android:id="@+id/homework6"
+        android:layout_alignBottom="@+id/class6"
+        android:layout_alignStart="@+id/homework5" />
+
+</RelativeLayout>

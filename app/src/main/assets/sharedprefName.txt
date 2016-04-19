@@ -1,0 +1,24 @@
+Shared Prefs named = "MyPrefs"
+
+monTxt = Monday office hours
+tuesTxt = Tuesday office hours
+wedTxt = Wednesday office hours
+thurTxt = Thursday office hours
+friTxt = Friday office hours
+
+adminlogin = Login for editing
+
+class1Txt
+class2Txt
+class3Txt
+class4Txt
+class5Txt
+class6Txt = class number and txt in it
+
+homework1Txt
+homework2Txt
+homework3Txt
+homework4Txt
+homework5Txt
+homework6Txt = homework number corresponding to class number and txt in it
+

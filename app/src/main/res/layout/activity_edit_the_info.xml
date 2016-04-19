@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.joey.screen.EditTheInfo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change Password"
+        android:id="@+id/textView15"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Password"
+        android:id="@+id/textView17"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/textView15"
+        android:layout_alignEnd="@+id/textView15"
+        android:layout_marginEnd="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/oldPassword"
+        android:minWidth="10dp"
+        android:layout_below="@+id/textView17"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/textView15" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Password"
+        android:id="@+id/textView18"
+        android:layout_below="@+id/oldPassword"
+        android:layout_alignStart="@+id/textView17" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newPassword"
+        android:minWidth="160dp"
+        android:layout_below="@+id/textView18"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button2"
+        android:layout_below="@+id/newPassword"
+        android:layout_alignStart="@+id/textView18"
+        android:onClick="PasswordUpdate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Office Hours"
+        android:id="@+id/textView19"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textView15"
+        android:layout_marginStart="133dp"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monday"
+        android:id="@+id/textView20"
+        android:layout_marginStart="73dp"
+        android:layout_alignTop="@+id/oldPassword"
+        android:layout_toEndOf="@+id/oldPassword" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tuesday"
+        android:id="@+id/textView21"
+        android:layout_alignBaseline="@+id/textView18"
+        android:layout_alignBottom="@+id/textView18"
+        android:layout_alignEnd="@+id/textView20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wednesday"
+        android:id="@+id/textView22"
+        android:layout_above="@+id/button2"
+        android:layout_alignStart="@+id/textView21" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thursday"
+        android:id="@+id/textView23"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_alignStart="@+id/textView20" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friday"
+        android:id="@+id/textView24"
+        android:layout_below="@+id/textView23"
+        android:layout_alignStart="@+id/textView23"
+        android:layout_marginTop="35dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/monedit"
+        android:text="h"
+        android:layout_alignBaseline="@+id/textView20"
+        android:layout_alignBottom="@+id/textView20"
+        android:layout_alignStart="@+id/tuesedit" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tuesedit"
+        android:layout_marginEnd="20dp"
+        android:text="h"
+        android:layout_alignBaseline="@+id/textView21"
+        android:layout_alignBottom="@+id/textView21"
+        android:layout_alignEnd="@+id/textView19" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/wededit"
+        android:layout_alignBaseline="@+id/textView22"
+        android:layout_alignBottom="@+id/textView22"
+        android:layout_alignStart="@+id/tuesedit"
+        android:text="h" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/thuredit"
+        android:text="h"
+        android:layout_alignBaseline="@+id/textView23"
+        android:layout_alignBottom="@+id/textView23"
+        android:layout_alignStart="@+id/wededit" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/fridedit"
+        android:text="f"
+        android:layout_alignBaseline="@+id/textView24"
+        android:layout_alignBottom="@+id/textView24"
+        android:layout_alignStart="@+id/thuredit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button6"
+        android:layout_below="@+id/fridedit"
+        android:layout_toEndOf="@+id/textView24"
+        android:onClick="OfficeHoursUpdate"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="HOME"
+        android:id="@+id/button7"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:onClick="GoHome"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class and Homework"
+        android:id="@+id/textView12"
+        android:textSize="20dp"
+        android:layout_marginEnd="121dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class 1"
+        android:id="@+id/textView25"
+        android:layout_alignTop="@+id/textView17"
+        android:layout_toEndOf="@+id/tuesedit"
+        android:layout_marginStart="140dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ce1"
+        android:minWidth="20dp"
+        android:layout_below="@+id/textView25"
+        android:layout_alignStart="@+id/textView25" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class 2"
+        android:id="@+id/textView26"
+        android:layout_below="@+id/ce1"
+        android:layout_alignStart="@+id/ce1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ce2"
+        android:layout_below="@+id/textView26"
+        android:layout_alignStart="@+id/textView26" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class 3"
+        android:id="@+id/textView27"
+        android:layout_below="@+id/ce2"
+        android:layout_alignStart="@+id/ce2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ce3"
+        android:layout_below="@+id/textView27"
+        android:layout_alignStart="@+id/textView27" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class 4"
+        android:id="@+id/textView28"
+        android:layout_below="@+id/ce3"
+        android:layout_alignStart="@+id/ce3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ce4"
+        android:layout_below="@+id/textView28"
+        android:layout_alignStart="@+id/textView28" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class 5"
+        android:id="@+id/textView29"
+        android:layout_below="@+id/ce4"
+        android:layout_alignStart="@+id/ce4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ce5"
+        android:layout_below="@+id/textView29"
+        android:layout_alignStart="@+id/textView29" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class 6"
+        android:id="@+id/textView30"
+        android:layout_below="@+id/ce5"
+        android:layout_alignStart="@+id/ce5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ce6"
+        android:layout_below="@+id/textView30"
+        android:layout_alignStart="@+id/textView30" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homework"
+        android:id="@+id/he11"
+        android:layout_alignTop="@+id/textView25"
+        android:layout_alignEnd="@+id/textView12" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/he1"
+        android:layout_below="@+id/he11"
+        android:layout_alignStart="@+id/he11" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homework"
+        android:id="@+id/he21"
+        android:layout_alignTop="@+id/textView26"
+        android:layout_alignStart="@+id/he1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/he2"
+        android:layout_below="@+id/he21"
+        android:layout_alignStart="@+id/he21" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homework"
+        android:id="@+id/he31"
+        android:layout_below="@+id/he2"
+        android:layout_alignStart="@+id/he2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/he3"
+        android:layout_below="@+id/he31"
+        android:layout_alignStart="@+id/he31" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homework"
+        android:id="@+id/he41"
+        android:layout_below="@+id/he3"
+        android:layout_alignStart="@+id/he3" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/he4"
+        android:layout_below="@+id/he41"
+        android:layout_alignStart="@+id/he41" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homework"
+        android:id="@+id/he51"
+        android:layout_below="@+id/he4"
+        android:layout_alignStart="@+id/he4" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/he5"
+        android:layout_below="@+id/he51"
+        android:layout_alignStart="@+id/he51" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Homework"
+        android:id="@+id/he61"
+        android:layout_below="@+id/he5"
+        android:layout_alignStart="@+id/he5" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/he6"
+        android:layout_below="@+id/he61"
+        android:layout_alignStart="@+id/he61" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button3"
+        android:layout_below="@+id/he6"
+        android:layout_toEndOf="@+id/textView30"
+        android:layout_marginTop="20dp"
+        android:onClick="ClassesUpdate"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Set to blank for nothing"
+        android:id="@+id/textView31"
+        android:layout_below="@+id/textView12"
+        android:layout_toEndOf="@+id/he11"
+        android:layout_marginStart="27dp" />
+
+
+</RelativeLayout>
