@@ -23,26 +23,30 @@ import java.io.InputStream;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    //Shared preferences are a way to save primitive values (including strings) to a file on the android device.
     public static final String MyPREFERENCES = "MyPrefs";
     SharedPreferences sharedpreferences;
 
-    //Test Commit2
+    //These are TextViews that show imformation the n the main page
     TextView mond;
     TextView tuesd;
     TextView wed;
     TextView thrud;
     TextView frid;
 
+    //class 1, 2, 3, etc
     TextView c1, c2, c3, c4, c5, c6;
+    //homework 1, 2 ,3 ,etc
     TextView h1, h2, h3, h4, h5, h6;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        //Tests if this is the first time running the app to create the shared prefs files
         if(!sharedpreferences.contains("runFirst")){
             resetPrefs();
         }
@@ -50,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.frontscreen);
 
 
-
+        //Gives all the textviews the values in their shared prefs
         mond = (TextView)findViewById(R.id.mondayOfficeHours);
         mond.setText(sharedpreferences.getString("monTxt", "DEFAULT"));
         tuesd = (TextView)findViewById(R.id.tuesDayOfficeHours);
@@ -97,8 +101,9 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        //Resets the shared preferences to default values
     public void resetPrefs(){
+        //sharedprefences uses and editor object to edit the prefences
         SharedPreferences.Editor edit = sharedpreferences.edit();
         edit.putString("monTxt", "MON");
         edit.putString("tuesTxt", "TUES");
@@ -123,17 +128,18 @@ public class MainActivity extends AppCompatActivity {
 
 
         edit.putBoolean("runFirst", true);
-
+        //need to commit the edits
         edit.commit();
     }
 
 
-
+        //When you hit the send Daniels a Message button
     public void SendMsg(View view){
         Intent intent = new Intent(this, SendEmail.class);
         startActivity(intent);
     }
 
+    //Whne you hit the admin login
     public void DanielsEdit(View view){
         Intent intent = new Intent(this, EditInformation.class);
         startActivity(intent);
@@ -159,5 +165,13 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //Override Pressing back takes you back to this page.
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+        super.onBackPressed();
     }
 }

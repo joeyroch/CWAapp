@@ -51,6 +51,24 @@ public class SendEmail extends AppCompatActivity {
         EditText userBody = (EditText)(findViewById(R.id.userBody));
         String body = userBody.getText().toString();
 
+        EditText name = (EditText)(findViewById(R.id.userName));
+        String userName = name.getText().toString();
+
+        if(userName.length() == 0){
+            userName = "(No Name)";
+        }
+        if(email.length() == 0){
+            email = "(No Email)";
+        }
+        if(body.length() == 0){
+            Toast toast = Toast.makeText(getApplicationContext(),"Body Required",Toast.LENGTH_SHORT);
+            toast.show();
+            return;
+        }
+        if(subject.length() == 0){
+            subject = "(No Subject)";
+        }
+
 
         Log.i("Send email", "");
         String[] TO = {"joey.rochford97@gmail.com"};
@@ -62,7 +80,7 @@ public class SendEmail extends AppCompatActivity {
         emailIntent.putExtra(Intent.EXTRA_EMAIL, new String[] {"joey.rochford97@gmail.com"}); //to email
         emailIntent.putExtra(Intent.EXTRA_CC, CC);
         emailIntent.putExtra(Intent.EXTRA_SUBJECT, "From DoorTablet: " + subject);
-        emailIntent.putExtra(Intent.EXTRA_TEXT, "Email:  " + email + "     Body:             " + body );
+        emailIntent.putExtra(Intent.EXTRA_TEXT, "Name:  "+ userName + "   Email:  " + email +   "     Body:   " + body );
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
