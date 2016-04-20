@@ -66,7 +66,7 @@ public class SendEmail extends AppCompatActivity {
 
         try {
             startActivity(Intent.createChooser(emailIntent, "Send mail..."));
-            Toast toast = Toast.makeText(getApplicationContext(),"Hit Send (Top Left) or Review Your Message",Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(getApplicationContext(),"Hit Send (Top Right) or Review Your Message",Toast.LENGTH_LONG);
             toast.show();
 
             Log.i("Finished sending email.", "");
