@@ -11,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 
@@ -37,10 +39,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+
+
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
-        if(!sharedpreferences.contains("run1")){
+        if(!sharedpreferences.contains("runFirst")){
             resetPrefs();
         }
+
         setContentView(R.layout.frontscreen);
 
 
@@ -113,9 +119,10 @@ public class MainActivity extends AppCompatActivity {
         edit.putString("homework4Txt", "Homework 4");
         edit.putString("homework5Txt", "Homework 5");
         edit.putString("homework6Txt", "Homework 6");
+        edit.putString("adminlogin", "default");
 
 
-        edit.putBoolean("run1", true);
+        edit.putBoolean("runFirst", true);
 
         edit.commit();
     }
