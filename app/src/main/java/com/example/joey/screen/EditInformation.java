@@ -20,6 +20,7 @@ public class EditInformation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         sharedpreferences = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
         setContentView(R.layout.adminlogin);
+        //sets the default password if needed
         if(!sharedpreferences.contains("adminlogin")){
             SharedPreferences.Editor edit = sharedpreferences.edit();
             edit.putString("adminlogin","default");
@@ -28,8 +29,12 @@ public class EditInformation extends AppCompatActivity {
 
     }
 
+
+    //Login button class
     public void AdminLogin(View view){
         EditText pass = (EditText)findViewById(R.id.passwordLogin);
+
+        //if password is correct
         if(pass.getText().toString().equals(sharedpreferences.getString("adminlogin","DEFAULT"))){
             Intent intent = new Intent(this, EditTheInfo.class);
             startActivity(intent);

@@ -76,6 +76,7 @@ public class EditTheInfo extends AppCompatActivity {
 
     }
 
+    //Home button takes you to frontpage
     public void GoHome(View view){
 
         Intent intent = new Intent(this, MainActivity.class);
@@ -83,6 +84,7 @@ public class EditTheInfo extends AppCompatActivity {
 
     }
 
+    //Updates office hours when submit button is pressed
     public void OfficeHoursUpdate(View view){
 
         SharedPreferences.Editor edit = sharedpreferences.edit();
@@ -100,6 +102,7 @@ public class EditTheInfo extends AppCompatActivity {
 
     }
 
+    //Updates the password when the submit button is pressed if the current password is correct
     public void PasswordUpdate(View view){
 
         if(oldPass.getText().toString().equals(sharedpreferences.getString("adminlogin", "DEFAULT"))){
@@ -119,7 +122,12 @@ public class EditTheInfo extends AppCompatActivity {
         }
 
     }
+    public void EditEmail(View view){
+        Intent intent = new Intent(this, EditEmailInfo.class);
+        startActivity(intent);
+    }
 
+    //updates the classes and homework when the submit button was pressed
     public void ClassesUpdate(View view){
         SharedPreferences.Editor edit = sharedpreferences.edit();
 
@@ -144,6 +152,7 @@ public class EditTheInfo extends AppCompatActivity {
 
     }
 
+    //Pressing the back button takes you to first page
     @Override
     public void onBackPressed() {
         Intent intent = new Intent(this, MainActivity.class);
